@@ -1,0 +1,21 @@
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.simple = '簡易記法を使った方法';
+            $scope.directive = 'ディレクティブを使った方法';
+        })
+
+        </script>
+    </head>
+    <body>
+        <div ng-controller="SampleController">
+            <p>{{simple}}</p>
+            <p ng-bind="directive"></p>
+        </div>
+    </body>
+</html>

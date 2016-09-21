@@ -1,0 +1,21 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular
+        .module('app', [])
+        .directive('myHoge', function() {
+            return {
+                restrict: 'E',
+                replace: true,
+                template: '<h1>hoge</h1>'
+            };
+        });
+
+        </script>
+    </head>
+    <body>
+        <my-hoge />
+    </body>
+</html>

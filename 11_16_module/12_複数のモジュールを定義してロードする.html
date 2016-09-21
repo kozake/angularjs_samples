@@ -1,0 +1,25 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular
+        .module('hogeModule', [])
+        .service('hogeService', function() {
+            this.method = function() {
+                return 'hoge service';
+            };
+        });
+
+        angular
+        .module('app', ['hogeModule'])
+        .run(function($rootScope, hogeService) {
+            $rootScope.message = hogeService.method();
+        });
+
+        </script>
+    </head>
+  <body>
+    <h1>{{message}}</h1>
+  </body>
+</html>

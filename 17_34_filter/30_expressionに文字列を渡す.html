@@ -1,0 +1,26 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.values = [
+                {name: 'taro',    age: 15},
+                {name: 'takeshi', age: 12},
+                {name: 'takuya',  age: 17}
+            ];
+
+            $scope.myFunction = function(value) {
+                return value.age;
+            };
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <ul>
+            <li ng-repeat="value in values | orderBy:'-age'">{{value.name}}({{value.age}})</li>
+        </ul>
+    </body>
+</html>

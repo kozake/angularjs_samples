@@ -1,0 +1,22 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+        })
+
+        </script>
+    </head>
+    <body>
+        <div ng-controller="SampleController">
+            <div ng-show="true">
+                Visible
+            </div>
+            <div ng-show="false">
+                Invisible
+            </div>
+        </div>
+    </body>
+</html>

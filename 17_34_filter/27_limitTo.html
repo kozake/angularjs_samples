@@ -1,0 +1,11 @@
+<html ng-app>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    </head>
+    <body>
+        <p>{{[1, 22, 333, 4444] | limitTo:3}}</p>
+        <p>{{"aBcDeFg" | limitTo:4}}</p>
+        <p>{{[1, 22, 333, 4444] | limitTo:-3}}</p>
+        <p>{{"aBcDeFg" | limitTo:-4}}</p>
+    </body>
+</html>

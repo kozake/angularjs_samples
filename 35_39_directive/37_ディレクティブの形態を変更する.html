@@ -1,0 +1,35 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular
+        .module('app', [])
+        .directive('myHoge', function() {
+            return {
+                restrict: 'E',
+                template: '<h1>hoge</h1>'
+            };
+        })
+        .directive('myFuga', function() {
+            return {
+                restrict: 'A',
+                template: 'fuga'
+            };
+        })
+        .directive('myPiyo', function() {
+            return {
+                restrict: 'CA',
+                template: 'piyo'
+            };
+        });
+
+        </script>
+    </head>
+    <body>
+        <my-hoge></my-hoge>
+        <h1 my-fuga></h1>
+        <h1 class=my-piyo></h1>
+        <h2 my-piyo></h2>
+    </body>
+</html>

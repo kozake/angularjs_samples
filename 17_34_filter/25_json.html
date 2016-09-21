@@ -1,0 +1,23 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.json = {
+                hoge: 'HOGE',
+                fuga: {
+                    a: true,
+                    b: false
+                },
+                piyo: [1, 2, 3]
+            };
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <pre>{{json | json}}</pre>
+    </body>
+</html>

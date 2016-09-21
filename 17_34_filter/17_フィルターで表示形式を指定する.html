@@ -1,0 +1,16 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.money = 1000;
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <h1>{{money | currency}}</h1>
+    </body>
+</html>

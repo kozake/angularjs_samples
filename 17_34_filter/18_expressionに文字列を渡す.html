@@ -1,0 +1,26 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.array1 = ["hoge", "fuga", "piyo"];
+            $scope.array2 = [
+                "hoge",
+                "fuga",
+                {a: "hoge"},
+                {a: "fuga"},
+                {b: {c: "hoge"}},
+                {b: {c: "fuga"}},
+            ];
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <pre>{{array1 | filter:"g" | json}}</pre>
+        <pre>{{array2 | filter:"h" | json}}</pre>
+    </body>
+</html>
+

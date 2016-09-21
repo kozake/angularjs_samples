@@ -1,0 +1,18 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.url = 'http://www.google.co.jp';
+            $scope.imageFileName = 'hoge.png';
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <img ng-src="./{{imageFileName}}" />
+        <a ng-href="{{url}}">link</a>
+    </body>
+</html>

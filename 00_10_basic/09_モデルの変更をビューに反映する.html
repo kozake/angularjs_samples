@@ -1,0 +1,22 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.message = 'hoge'
+
+            $scope.change = function() {
+                $scope.message = 'change!!'
+            }
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <h1>{{message}}</h1>
+
+        <button ng-click="change()">change!!</button>
+    </body>
+</html>

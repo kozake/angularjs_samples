@@ -1,0 +1,20 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.contains = function(actual, expected) {
+                return actual.indexOf(expected) != -1;
+            };
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <p>{{["a", "A", "ab", "c"] | filter:"a":true}}
+        <p>{{["a", "A", "ab", "c"] | filter:"a":false}}
+        <p>{{["a", "A", "ab", "c"] | filter:"a":contains}}
+    </body>
+</html>

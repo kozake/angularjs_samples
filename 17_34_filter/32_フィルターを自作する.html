@@ -1,0 +1,18 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .filter('myFilter', function() {
+            return function(value, param1, param2) {
+                return param1 + value + param2;
+            };
+        });
+
+        </script>
+    </head>
+    <body>
+        <h1>{{"hoge" | myFilter:"<":">"}}</h1>
+    </body>
+</html>

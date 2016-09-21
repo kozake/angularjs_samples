@@ -1,0 +1,17 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .run(function($filter) {
+            var filter = $filter('json');
+            var str = filter({name: 'Taro', age: 17});
+            console.log(str);
+        });
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<html ng-app>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li ng-repeat="value in [1, 2, 3, 4, 5] | limitTo : 3">{{value}}</li>
+        </ul>
+    </body>
+</html>

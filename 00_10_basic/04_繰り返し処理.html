@@ -1,0 +1,22 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.items = [
+                 {key: 'hoge', value: 'HOGE'}
+                ,{key: 'fuga', value: 'FUGA'}
+                ,{key: 'piyo', value: 'PIYO'}
+            ];
+        })
+
+        </script>
+    </head>
+    <body>
+        <ul ng-controller="SampleController">
+            <li ng-repeat="item in items">{{item.key}} : {{item.value}}</li>
+        </ul>
+    </body>
+</html>

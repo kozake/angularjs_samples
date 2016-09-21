@@ -1,0 +1,21 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.click = function() {
+                $scope.message = 'click button!';
+            };
+        })
+
+        </script>
+    </head>
+    <body>
+        <div ng-controller="SampleController">
+            <button ng-click="click()">Button</button>
+            <p>{{message}}</p>
+        </div>
+    </body>
+</html>

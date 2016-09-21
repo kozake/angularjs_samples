@@ -1,0 +1,22 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular
+        .module('app', [])
+        .directive('myHoge', function() {
+            return {
+                template: '<u>message = {{message}}</u>'
+            };
+        })
+        .controller('SampleController', function($scope) {
+            $scope.message = 'hoge';
+        });
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <h1 my-hoge>some string</h1>
+    </body>
+</html>

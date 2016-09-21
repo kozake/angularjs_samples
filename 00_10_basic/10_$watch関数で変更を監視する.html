@@ -1,0 +1,29 @@
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.hoge = 0;
+            $scope.fuga = 0;
+            $scope.sum = 0;
+
+            $scope.$watch(
+                function() {
+                    return $scope.hoge + $scope.fuga;
+                },
+                function() {
+                    $scope.sum = $scope.hoge + $scope.fuga;
+                });
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        hoge : <input type="number" ng-model="hoge" /><br />
+        fuga : <input type="number" ng-model="fuga" /><br />
+        <p>合計 : {{sum}}</p>
+    </body>
+</html>

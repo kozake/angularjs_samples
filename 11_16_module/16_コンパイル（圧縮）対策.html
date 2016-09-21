@@ -1,0 +1,16 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', ['$scope', function ($scope) {
+            $scope.message = 'hoge';
+        }])
+
+        </script>
+    </head>
+    <body>
+        <h1 ng-controller="SampleController">{{message}}</h1>
+    </body>
+</html>

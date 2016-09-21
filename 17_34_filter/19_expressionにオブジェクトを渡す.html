@@ -1,0 +1,27 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.physicists = [
+                {firstName: 'Johannes', lastName: 'Kepler'},
+                {firstName: 'Galileo',  lastName: 'Galilei'},
+                {firstName: 'Thomas',   lastName: 'Young'},
+                {firstName: 'Michael',  lastName: 'Faraday'},
+                {firstName: 'Edward',   lastName: 'Morley'},
+                {firstName: 'Niels',    lastName: 'Bohr'}
+            ];
+        })
+
+        </script>
+    </head>
+    <body ng-controller="SampleController">
+        <ul>
+            <li ng-repeat="physicist in physicists | filter:{firstName:'e', lastName: 'l'}">
+                {{physicist.firstName}} {{physicist.lastName}}
+            </li>
+        </ul>
+    </body>
+</html>

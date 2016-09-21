@@ -1,0 +1,43 @@
+<html ng-app="app">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script>
+
+        angular.module('app', [])
+        .controller('SampleController', function ($scope) {
+            $scope.hoge = 'red solid-border';
+            $scope.isRed = true;
+            $scope.isDotted = true;
+        })
+
+        </script>
+        <style>
+            .red {
+                color: red;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .solid-border {
+                border: 1px solid black;
+            }
+
+            .dotted-border {
+                border: 1px dotted black;
+            }
+
+            li {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body ng-controller="SampleController">
+        <ul>
+            <li ng-class="hoge">hoge</li>
+            <li ng-class="['blue', 'solid-border']">fuga</li>
+            <li ng-class="{'red': isRed, 'dotted-border': isDotted}">piyo</li>
+        </ul>
+    </body>
+</html>
